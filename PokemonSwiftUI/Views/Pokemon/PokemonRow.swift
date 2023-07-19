@@ -6,29 +6,23 @@
 //
 
 import SwiftUI
+import Kingfisher
 
 struct PokemonRow: View {
     
-    //Add landmark as a stored property of LandmarkRow.
-    var pokemon: Pokemon
+    // var pokemon: PokemonResponse.Pokemon
     
     var body: some View {
         HStack {
-            AsyncImage(url: URL(string: pokemon.urlImage))
-            /*pokemon.image
-                .resizable()
-                .frame(width: 50, height: 50)*/
-            Text(pokemon.name)
-            Spacer()
+            Text("a")
         }
     }
 }
 
-struct PokemonRow_Previews: PreviewProvider {
+struct PokemonRow_Previews:
+    PreviewProvider {
+    
     static var previews: some View {
-        Group {
-            PokemonRow(pokemon: pokemons[0])
-        }
-        .previewLayout(.fixed(width: 300, height: 70))
+        PokemonRow()
     }
 }

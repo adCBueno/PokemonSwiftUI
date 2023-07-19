@@ -1,13 +1,13 @@
 //
-//  ContentView.swift
+//  PokemonList.swift
 //  PokemonSwiftUI
 //
-//  Created by User on 14/7/23.
+//  Created by User on 19/7/23.
 //
 
 import SwiftUI
 
-struct ContentView: View {
+struct Pokemons: View {
     
     @ObservedObject var pokemonAPI = PokemonAPI()
     
@@ -21,10 +21,9 @@ struct ContentView: View {
         .navigationTitle("Pokemon List")
     }
 }
-       
-struct ContentView_Previews: PreviewProvider {
+
+struct Pokemons_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        Pokemons()
     }
 }
-
