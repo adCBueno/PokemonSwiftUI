@@ -8,9 +8,10 @@
 import SwiftUI
 
 struct PokemonList: View {
-    
+    @ObservedObject var loginViewModel = LoginViewModel()
     @ObservedObject var pokemonAPI = PokemonListViewModel()
-      
+    @State private var showingProfile = false
+    
     var body: some View {
         NavigationView {
             List(pokemonAPI.pokemons ?? [], id: \.name) { pokemon in
@@ -20,8 +21,24 @@ struct PokemonList: View {
                 pokemonAPI.loadData()
             }
             .navigationTitle("Pokemon List")
-            .navigationBarItems(leading: Image(systemName: "arrowshape.turn.up.left.fill"))
-            .navigationBarItems(trailing:  Image(systemName: "person.crop.circle"))
+            .toolbar {
+                Button {
+                    showingProfile.toggle()
+                } label: {
+                    Label("User Profile", systemImage: "person.crop.circle")
+                }
+            }.sheet(isPresented: $showingProfile) {
+                SettingsView()
+            }
+            .toolbar {
+                ToolbarItem(placement: .navigationBarLeading) {
+                    Button {
+                        loginViewModel.logout()
+                    } label: {
+                        Label("Log out", systemImage: "arrowshape.turn.up.left.fill")
+                    }
+                }
+            }
             
             NavigationLink {
                 PokemonDetail()

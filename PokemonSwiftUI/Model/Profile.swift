@@ -6,21 +6,7 @@
 //
 
 import Foundation
-import SwiftUI
-import CoreLocation
-
-struct Profile0: Hashable, Codable, Identifiable {
-    var id: Int
-    var username: String = "user1@gmail.com"
-    var password: String = "user1"
-    var description: String = "I love sports, painting and gaming. And of course, Pokemon."
-    
-    static let `default` = Profile0(id: 1, username: "user1@gmail.com", password: "user1", description: "I love sports, painting and gaming. And of course, Pokemon.")
-        
-}
-
 import JWTDecode
-
 
 struct Profile {
   
@@ -32,7 +18,6 @@ struct Profile {
   let updatedAt: String
 
 }
-
 
 extension Profile {
   
