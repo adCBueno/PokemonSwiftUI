@@ -7,16 +7,7 @@
 
 import Foundation
 
-struct PokemonItem: Codable {
-    let name: String
-    let url: String
-}
-
-struct PokemonList: Codable {
-    let results: [PokemonItem]
-}
-
-class PokemonAPI: ObservableObject {
+class PokemonListViewModel: ObservableObject {
     @Published var pokemons: [PokemonResponse.Pokemon]?
 
     func loadData() {

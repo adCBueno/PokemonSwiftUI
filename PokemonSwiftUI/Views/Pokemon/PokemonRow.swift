@@ -14,8 +14,19 @@ struct PokemonRow: View {
     
     var body: some View {
         HStack {
-            Text("a")
+            Image("pikachu")
+                .resizable()
+                .frame(width: 100, height: 100, alignment: .leading)
+                .padding()
+            
+            Text("Boulbasaur")
+                .font(.title)
+                .frame(alignment: .center)
+                .padding()
         }
+        .frame(maxWidth: .infinity, alignment: .leading).border(.yellow, width: 3)
+        .padding([.leading, .trailing], 30)
+        .shadow(radius: 10)
     }
 }
 

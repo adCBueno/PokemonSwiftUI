@@ -6,25 +6,50 @@
 //
 
 import SwiftUI
+import Auth0
 
 struct ContentView: View {
     
-    @ObservedObject var pokemonAPI = PokemonAPI()
-    
+    @ObservedObject var pokemonAPI = PokemonListViewModel()
+    @ObservedObject var loginViewModel = LoginViewModel()
+        
     var body: some View {
-        List(pokemonAPI.pokemons ?? [], id: \.name) { pokemon in
-            Text(pokemon.name)
+        
+        if !loginViewModel.isAuthenticated {
+            
+            NavigationView {
+                VStack {
+                    
+                    LoginView()
+                        .padding([.top], 200)
+                    
+                    Button("Sign in") {
+                        
+                      loginViewModel.login()
+                    }
+                    .frame(width: 100, height: 50)                .border(.white)
+                    .cornerRadius(10)
+                    .foregroundColor(.white)
+                    .font(.title2)
+                    .bold()
+                    .padding([.top, .bottom], 100)
+                    
+                }
+                .frame(maxHeight: .infinity)
+                .background(GradientBackground())
+            }
+            
+        } else {
+            
+                PokemonList()
+
         }
-        .onAppear() {
-            pokemonAPI.loadData()
-        }
-        .navigationTitle("Pokemon List")
-    }
-}
-       
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
     }
 }
 
+struct ContentView_Previews: PreviewProvider {
+    static var previews: some View {
+     ContentView()
+            .environmentObject(LoginViewModel())
+    }
+}

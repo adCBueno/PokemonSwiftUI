@@ -8,8 +8,11 @@
 import SwiftUI
 
 struct PikachuImage: View {
+    
+    var imageName: String = "pikachu"
+    
     var body: some View {
-        Image("pikachu")
+        Image(imageName)
             .resizable()
             .scaledToFit()
             .padding()
@@ -23,6 +26,6 @@ struct PikachuImage: View {
 
 struct PikachuImage_Previews: PreviewProvider {
     static var previews: some View {
-        PikachuImage()
+        PikachuImage(imageName: "pikachu")
     }
 }
