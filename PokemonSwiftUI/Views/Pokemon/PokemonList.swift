@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct PokemonList: View {
-    @ObservedObject var loginViewModel = LoginViewModel()
+    @EnvironmentObject var loginViewModel: LoginViewModel
     @ObservedObject var pokemonAPI = PokemonListViewModel()
     @State private var showingProfile = false
     
