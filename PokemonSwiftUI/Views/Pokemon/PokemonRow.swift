@@ -14,22 +14,17 @@ struct PokemonRow: View {
     
     var body: some View {
         HStack {
-            Image("pikachu")
+            KFImage(URL(string: String(format: ConstantVariables.pokemonImageURL, pokemon.id)))
                 .resizable()
-                .frame(width: 50, height: 50, alignment: .trailing)
+                .frame(width: 60, height: 60, alignment: .trailing)
                 .padding()
-            
-            /*KFImage(URL(string: String(format: ConstantVariables.pokemonImageURL, pokemon.id)))
-                .resizable()
-                .frame(width: 50, height: 50, alignment: .trailing)
-                .padding()*/
             
             Text(pokemon.name)
                 .font(.title2)
                 .frame(width: 150, alignment: .leading)
                 .padding()
         }
-        .frame(maxWidth: .infinity, alignment: .leading).border(.yellow, width: 3)
+        .frame(maxWidth: .infinity, alignment: .leading).border(.gray, width: 3)
         .padding([.leading, .trailing], 30)
         .shadow(radius: 10)
     }

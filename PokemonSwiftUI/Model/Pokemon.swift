@@ -13,7 +13,15 @@ struct PokemonResponse: Codable {
     struct Pokemon: Codable {
         let name: String
         let url: String
+        
+        var id: Int {
+            return Int(url.split(separator: "/").last ?? "") ?? 0
+        }
     }
     
     let results: [Pokemon]
+}
+
+struct PokemonImage: Codable {
+    let id: Int
 }

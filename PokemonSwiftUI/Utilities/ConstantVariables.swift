@@ -8,8 +8,8 @@
 import Foundation
 
 class ConstantVariables {
-    static let pokeApiEndpoint = "https://pokeapi.co/api/v2/pokemon"
-    static let pokemonImageURL = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png"
+    static let pokeApiEndpoint = "https://pokeapi.co/api/v2/pokemon?limit=1000&offset=0"
+    static let pokemonImageURL = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/%d.png"
     static let pokemonApiEvlolutionEndpoint = "https://graphql-pokeapi.vercel.app/api/graphql"
     
     // Colors and icons    
