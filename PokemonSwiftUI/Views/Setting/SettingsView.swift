@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct SettingsView: View {
+    @EnvironmentObject var loginViewModel: LoginViewModel
     
     var body: some View {
         VStack {
@@ -20,6 +21,15 @@ struct SettingsView: View {
                 .padding([.bottom], 5)
                 .font(.title3)
             
+        }
+        .toolbar {
+            ToolbarItem(placement: .navigationBarLeading) {
+                Button {
+                    loginViewModel.logout()
+                } label: {
+                    Label("Log out", systemImage: "arrowshape.turn.up.left.fill")
+                }
+            }
         }
     }
 }

@@ -10,18 +10,23 @@ import Kingfisher
 
 struct PokemonRow: View {
     
-    // var pokemon: PokemonResponse.Pokemon
+    var pokemon: PokemonResponse.Pokemon
     
     var body: some View {
         HStack {
             Image("pikachu")
                 .resizable()
-                .frame(width: 100, height: 100, alignment: .leading)
+                .frame(width: 50, height: 50, alignment: .trailing)
                 .padding()
             
-            Text("Boulbasaur")
-                .font(.title)
-                .frame(alignment: .center)
+            /*KFImage(URL(string: String(format: ConstantVariables.pokemonImageURL, pokemon.id)))
+                .resizable()
+                .frame(width: 50, height: 50, alignment: .trailing)
+                .padding()*/
+            
+            Text(pokemon.name)
+                .font(.title2)
+                .frame(width: 150, alignment: .leading)
                 .padding()
         }
         .frame(maxWidth: .infinity, alignment: .leading).border(.yellow, width: 3)
@@ -30,10 +35,4 @@ struct PokemonRow: View {
     }
 }
 
-struct PokemonRow_Previews:
-    PreviewProvider {
-    
-    static var previews: some View {
-        PokemonRow()
-    }
-}
+

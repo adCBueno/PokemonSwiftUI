@@ -1,15 +1,15 @@
 //
-//  ModelData.swift
+//  PokemonApiRequest.swift
 //  PokemonSwiftUI
 //
-//  Created by User on 14/7/23.
+//  Created by User on 21/7/23.
 //
 
 import Foundation
 
-class PokemonListViewModel: ObservableObject {
-    @Published var pokemons: [PokemonResponse.Pokemon]? 
-
+class PokemonApiRequest: ObservableObject {
+    @Published var pokemons: [PokemonResponse.Pokemon]?
+    
     func loadData() {
         guard let url = URL(string: ConstantVariables.pokeApiEndpoint) else {
             print("Invalid URL")

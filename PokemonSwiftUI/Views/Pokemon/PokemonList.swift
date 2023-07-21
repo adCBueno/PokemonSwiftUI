@@ -14,8 +14,17 @@ struct PokemonList: View {
     
     var body: some View {
         NavigationView {
-            List(pokemonAPI.pokemons ?? [], id: \.name) { pokemon in
+            /*List(pokemonAPI.pokemons ?? [], id: \.name) { pokemon in
                 Text(pokemon.name)
+            }*/
+            List {
+                ForEach(pokemonAPI.pokemons ?? [], id: \.name) { pokemon in
+                    NavigationLink {
+                        PokemonDetail(pokemon: pokemon)
+                    } label: {
+                        PokemonRow(pokemon: pokemon)
+                    }                    
+                }
             }
             .onAppear() {
                 pokemonAPI.loadData()
@@ -40,11 +49,6 @@ struct PokemonList: View {
                 }
             }
             
-            NavigationLink {
-                PokemonDetail()
-            } label: {
-                PokemonRow()
-            }
         }
     }
 }
