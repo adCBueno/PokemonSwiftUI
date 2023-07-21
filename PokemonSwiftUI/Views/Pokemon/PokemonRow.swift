@@ -27,7 +27,7 @@ struct PokemonRow: View {
         .frame(maxWidth: .infinity, alignment: .leading).border(.gray, width: 3)
         .padding([.leading, .trailing], 30)
         .shadow(radius: 10)
-    }
+    }    
 }
 
 

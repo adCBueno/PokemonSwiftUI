@@ -199,7 +199,6 @@
 		CE6C6E912A617A3100886227 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				CEE468312A6ADA9E00612923 /* SearchView */,
 				CE2053B22A6814C500C96159 /* Login */,
 				CE2053AF2A68149200C96159 /* Pokemon */,
 				CEC2A98B2A6825850066A302 /* Setting */,
@@ -242,13 +241,6 @@
 				CEC2A98C2A68259F0066A302 /* SettingsView.swift */,
 			);
 			path = Setting;
-			sourceTree = "<group>";
-		};
-		CEE468312A6ADA9E00612923 /* SearchView */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = SearchView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

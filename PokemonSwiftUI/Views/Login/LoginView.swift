@@ -32,7 +32,7 @@ struct LoginView: View {
             .background(GradientBackground())
             
         }
-    }
+    }    
 }
 
 struct LoginView_Previews: PreviewProvider {
