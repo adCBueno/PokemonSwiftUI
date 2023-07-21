@@ -37,15 +37,6 @@ struct PokemonList: View {
             }.sheet(isPresented: $showingProfile) {
                 SettingsView()
             }
-            .toolbar {
-                ToolbarItem(placement: .navigationBarLeading) {
-                    Button {
-                        loginViewModel.logout()
-                    } label: {
-                        Label("Log out", systemImage: "arrowshape.turn.up.left.fill")
-                    }
-                }
-            }
         }
     }
 }

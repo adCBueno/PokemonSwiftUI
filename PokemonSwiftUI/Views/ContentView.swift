@@ -11,7 +11,7 @@ import Auth0
 struct ContentView: View {
     
     @ObservedObject var pokemonAPI = PokemonListViewModel()
-    @ObservedObject var loginViewModel = LoginViewModel()
+    @EnvironmentObject var loginViewModel: LoginViewModel
         
     var body: some View {
         

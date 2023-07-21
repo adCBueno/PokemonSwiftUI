@@ -30,6 +30,7 @@ struct LoginView: View {
             .frame(maxWidth: .infinity)
             .padding()
             .background(GradientBackground())
+            
         }
     }
 }

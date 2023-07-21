@@ -14,23 +14,24 @@ struct SettingsView: View {
         VStack {
             PikachuImage(imageName: "profile")
                 .frame(width: 250, height: 250)
-            Text("email: user1@gmail.com")
+            
+            Text("email: \(loginViewModel.userProfile.email)")
                 .padding([.bottom], 5)
                 .font(.title2)
-            Text("Desciption: Love pokemons!")
-                .padding([.bottom], 5)
-                .font(.title3)
-            
         }
-        .toolbar {
-            ToolbarItem(placement: .navigationBarLeading) {
-                Button {
-                    loginViewModel.logout()
-                } label: {
-                    Label("Log out", systemImage: "arrowshape.turn.up.left.fill")
-                }
-            }
+        
+        Button("Logout") {
+            loginViewModel.logout()
         }
+        .foregroundColor(.cyan)
+        .padding()
+        .frame(width: 150, height: 50)
+        .border(.cyan)
+        .cornerRadius(10)
+        .font(.title2)
+        .bold()
+        .padding([.top, .bottom], 100)
+        
     }
 }
 

@@ -22,6 +22,19 @@ struct PokemonResponse: Codable {
     let results: [Pokemon]
 }
 
-struct PokemonImage: Codable {
-    let id: Int
+struct PokemonDetailResponse: Codable {
+    struct TypeElement: Codable {
+        struct PokemonType: Codable {
+            let name: String
+        }
+        let type: PokemonType
+    }
+    let name: String
+    let types: [TypeElement]
+    let sprites: Sprites
+}
+
+struct Sprites: Codable {
+    let front_default: String
+    let front_shiny: String
 }
