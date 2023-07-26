@@ -31,6 +31,7 @@
 		CEC2A9922A68757A0066A302 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC2A9912A68757A0066A302 /* LoginViewModel.swift */; };
 		CEC2A9982A698D2B0066A302 /* Auth0 in Frameworks */ = {isa = PBXBuildFile; productRef = CEC2A9972A698D2B0066A302 /* Auth0 */; };
 		CEC2A99A2A698F2A0066A302 /* Auth0.plist in Resources */ = {isa = PBXBuildFile; fileRef = CEC2A9992A698F2A0066A302 /* Auth0.plist */; };
+		CEE33F902A71AC7600A582F7 /* PokemonService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE33F8F2A71AC7600A582F7 /* PokemonService.swift */; };
 		CEE468302A6AD54D00612923 /* PokemonDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE4682F2A6AD54D00612923 /* PokemonDetailViewModel.swift */; };
 /* End PBXBuildFile section */
 
@@ -77,6 +78,7 @@
 		CEC2A98C2A68259F0066A302 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		CEC2A9912A68757A0066A302 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		CEC2A9992A698F2A0066A302 /* Auth0.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Auth0.plist; sourceTree = "<group>"; };
+		CEE33F8F2A71AC7600A582F7 /* PokemonService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonService.swift; sourceTree = "<group>"; };
 		CEE4682F2A6AD54D00612923 /* PokemonDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonDetailViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -157,10 +159,12 @@
 		CE6C6E612A617A1200886227 /* PokemonSwiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				CEE468322A7019CB00612923 /* Managers */,
 				CE6C6E9B2A617D6600886227 /* Utilities */,
 				CE6C6E942A617A5500886227 /* Model */,
 				CE6C6E912A617A3100886227 /* Views */,
 				CE6C6E932A617A4600886227 /* ViewModel */,
+				CEE33F8E2A71AC5700A582F7 /* Services */,
 				CE6C6E622A617A1200886227 /* PokemonSwiftUIApp.swift */,
 				CE6C6E662A617A1400886227 /* Assets.xcassets */,
 				CE6C6E6B2A617A1400886227 /* Persistence.swift */,
@@ -241,6 +245,21 @@
 				CEC2A98C2A68259F0066A302 /* SettingsView.swift */,
 			);
 			path = Setting;
+			sourceTree = "<group>";
+		};
+		CEE33F8E2A71AC5700A582F7 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				CEE33F8F2A71AC7600A582F7 /* PokemonService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		CEE468322A7019CB00612923 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Managers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -399,6 +418,7 @@
 				CE2053B52A68185100C96159 /* PikachuImage.swift in Sources */,
 				CE6C6E9A2A617D3A00886227 /* ConstantVariables.swift in Sources */,
 				CE2053AE2A68142300C96159 /* PokemonList.swift in Sources */,
+				CEE33F902A71AC7600A582F7 /* PokemonService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -557,7 +577,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"PokemonSwiftUI/Preview Content\"";
-				DEVELOPMENT_TEAM = J59928XLF5;
+				DEVELOPMENT_TEAM = 5FBKPZNN99;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -570,7 +590,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.example.PokemonSwiftUI;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jalasoft.PokemonSwiftUI;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -586,7 +606,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"PokemonSwiftUI/Preview Content\"";
-				DEVELOPMENT_TEAM = J59928XLF5;
+				DEVELOPMENT_TEAM = 5FBKPZNN99;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -599,7 +619,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.example.PokemonSwiftUI;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jalasoft.PokemonSwiftUI;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;

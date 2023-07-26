@@ -45,7 +45,7 @@ struct PokemonDetail: View {
                 .frame(maxHeight: .infinity, alignment: .top)
                 .padding()
                 .onAppear {
-                    viewModel.loadData(url: pokemon.url)
+                    viewModel.loadData(url: pokemon.url, id: pokemon.id)
                 }
             }
         }
