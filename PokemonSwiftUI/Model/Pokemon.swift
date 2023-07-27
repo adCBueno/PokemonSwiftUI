@@ -17,7 +17,7 @@ struct PokemonResponse: Codable {
         var id: Int {
             return Int(url.split(separator: "/").last ?? "") ?? 0
         }
-    }    
+    }
     let results: [Pokemon]
 }
 
