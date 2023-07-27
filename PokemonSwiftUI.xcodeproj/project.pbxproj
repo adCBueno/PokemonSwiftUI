@@ -34,7 +34,6 @@
 		CEE33F902A71AC7600A582F7 /* PokemonService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE33F8F2A71AC7600A582F7 /* PokemonService.swift */; };
 		CEE33F932A71B03A00A582F7 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = CEE33F922A71B03A00A582F7 /* Realm */; };
 		CEE33F952A71B03A00A582F7 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = CEE33F942A71B03A00A582F7 /* RealmSwift */; };
-		CEE33F972A71B09E00A582F7 /* PokemonStorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE33F962A71B09E00A582F7 /* PokemonStorageService.swift */; };
 		CEE33F992A71B1DE00A582F7 /* PokemonRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE33F982A71B1DE00A582F7 /* PokemonRealm.swift */; };
 		CEE468302A6AD54D00612923 /* PokemonDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE4682F2A6AD54D00612923 /* PokemonDetailViewModel.swift */; };
 /* End PBXBuildFile section */
@@ -83,7 +82,6 @@
 		CEC2A9912A68757A0066A302 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		CEC2A9992A698F2A0066A302 /* Auth0.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Auth0.plist; sourceTree = "<group>"; };
 		CEE33F8F2A71AC7600A582F7 /* PokemonService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonService.swift; sourceTree = "<group>"; };
-		CEE33F962A71B09E00A582F7 /* PokemonStorageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonStorageService.swift; sourceTree = "<group>"; };
 		CEE33F982A71B1DE00A582F7 /* PokemonRealm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonRealm.swift; sourceTree = "<group>"; };
 		CEE4682F2A6AD54D00612923 /* PokemonDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonDetailViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -260,7 +258,6 @@
 			isa = PBXGroup;
 			children = (
 				CEE33F8F2A71AC7600A582F7 /* PokemonService.swift */,
-				CEE33F962A71B09E00A582F7 /* PokemonStorageService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -424,7 +421,6 @@
 				CEC2A9882A68194F0066A302 /* Profile.swift in Sources */,
 				CE6C6E632A617A1200886227 /* PokemonSwiftUIApp.swift in Sources */,
 				CEC2A98A2A681E610066A302 /* GradientBackground.swift in Sources */,
-				CEE33F972A71B09E00A582F7 /* PokemonStorageService.swift in Sources */,
 				CE6C6E6F2A617A1400886227 /* PokemonSwiftUI.xcdatamodeld in Sources */,
 				CE6C6E9D2A617E6E00886227 /* PokemonListViewModel.swift in Sources */,
 				CE6C6E982A617BAC00886227 /* Pokemon.swift in Sources */,
