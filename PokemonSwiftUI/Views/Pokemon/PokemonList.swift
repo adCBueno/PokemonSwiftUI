@@ -11,11 +11,14 @@ struct PokemonList: View {
     @EnvironmentObject var loginViewModel: LoginViewModel
     @ObservedObject var pokemonAPI = PokemonListViewModel()
     @State private var showingProfile = false
+    @State private var pokemonSearched = ""
     
     var body: some View {
         NavigationView {
             List {
-                ForEach(pokemonAPI.pokemons ?? [], id: \.name) { pokemon in
+                ForEach(pokemonAPI.pokemons?.filter {
+                    self.pokemonSearched.isEmpty ? true : $0.name.lowercased().contains(self.pokemonSearched.lowercased())
+                } ?? [], id: \.name) { pokemon in
                     NavigationLink {
                         PokemonDetail(pokemon: pokemon)
                     } label: {
@@ -37,7 +40,7 @@ struct PokemonList: View {
             }.sheet(isPresented: $showingProfile) {
                 SettingsView()
             }
-        }
+        }.searchable(text: $pokemonSearched)
     }
 }
 
